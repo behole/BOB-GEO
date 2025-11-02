@@ -1,0 +1,122 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://brushonblock.com/#organization",
+  "name": "Brush On Block",
+  "legalName": "Brush On Block LLC",
+  "url": "https://brushonblock.com",
+  "logo": {
+    "@type": "ImageObject",
+    "@id": "https://brushonblock.com/#logo",
+    "url": "https://brushonblock.com/cdn/shop/files/brush-on-block-logo.png",
+    "contentUrl": "https://brushonblock.com/cdn/shop/files/brush-on-block-logo.png",
+    "caption": "Brush On Block Logo",
+    "width": "250",
+    "height": "60"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://brushonblock.com/cdn/shop/files/brush-on-block-products.jpg",
+    "contentUrl": "https://brushonblock.com/cdn/shop/files/brush-on-block-products.jpg",
+    "caption": "Brush On Block Mineral Sunscreen Products"
+  },
+  "description": "Brush On Block is a leading mineral sunscreen brand specializing in SPF 30 and SPF 50 powder and cream formulations. Our innovative brush-on powder sunscreen combines broad-spectrum sun protection with skin-loving ingredients like niacinamide, hyaluronic acid, and vitamin C for convenient, effective, reef-safe sun protection.",
+  "slogan": "Skin-Loving Ingredients at Your Fingertips",
+  "foundingDate": "2008",
+  "founder": {
+    "@type": "Person",
+    "name": "Brush On Block Founder"
+  },
+  "knowsAbout": [
+    "Mineral Sunscreen",
+    "SPF Protection",
+    "Clean Beauty",
+    "Skincare",
+    "Powder Sunscreen",
+    "Reef-Safe Sunscreen",
+    "Zinc Oxide Sunscreen",
+    "Niacinamide Skincare",
+    "Hyaluronic Acid",
+    "Sun Protection",
+    "Natural Beauty Products"
+  ],
+  "brand": {
+    "@type": "Brand",
+    "@id": "https://brushonblock.com/#brand",
+    "name": "Brush On Block",
+    "logo": "https://brushonblock.com/cdn/shop/files/brush-on-block-logo.png",
+    "slogan": "Skin-Loving Ingredients at Your Fingertips",
+    "description": "Premium mineral sunscreen products with innovative brush-on application"
+  },
+  "sameAs": [
+    "https://www.instagram.com/brushonblock/",
+    "https://www.facebook.com/BrushOnBlock/",
+    "https://twitter.com/brushonblock",
+    "https://www.pinterest.com/brushonblock/",
+    "https://www.youtube.com/@brushonblock"
+  ],
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "contactType": "Customer Service",
+      "telephone": "+1-XXX-XXX-XXXX",
+      "email": "info@brushonblock.com",
+      "areaServed": "US",
+      "availableLanguage": ["English"],
+      "contactOption": "TollFree"
+    },
+    {
+      "@type": "ContactPoint",
+      "contactType": "Sales",
+      "email": "sales@brushonblock.com",
+      "areaServed": "Worldwide",
+      "availableLanguage": ["English"]
+    }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "US",
+    "addressRegion": "XX",
+    "addressLocality": "City Name"
+  },
+  "vatID": "XX-XXXXXXX",
+  "taxID": "XX-XXXXXXX",
+  "areaServed": {
+    "@type": "Place",
+    "name": "Worldwide"
+  },
+  "makesOffer": [
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Product",
+        "name": "SPF 30 Mineral Powder Sunscreen",
+        "category": "Sunscreen"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Product",
+        "name": "SPF 50 Sheer Genius Mineral Sunscreen",
+        "category": "Sunscreen"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Product",
+        "name": "Mineral Lip Care Products",
+        "category": "Lip Care"
+      }
+    }
+  ],
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://brushonblock.com/search?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}

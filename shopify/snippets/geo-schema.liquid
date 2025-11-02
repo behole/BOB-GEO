@@ -1,0 +1,82 @@
+{%- comment -%}
+  Sitewide JSON-LD loader for Brush On Block (GEO-first)
+  - Outputs Organization + WebSite on every page
+  - Outputs BreadcrumbList on non-home templates
+  - Delegates Product/Article schema to dedicated snippets based on template
+{%- endcomment -%}
+
+{%- assign site_url = shop.url -%}
+{%- assign logo_url = '' -%}
+{%- if section and section.settings and section.settings.logo != blank -%}
+  {%- assign logo_url = section.settings.logo | image_url: width: 512 | prepend: 'https:' -%}
+{%- elsif settings.logo != blank -%}
+  {%- assign logo_url = settings.logo | image_url: width: 512 | prepend: 'https:' -%}
+{%- else -%}
+  {%- assign logo_url = 'BOB_logo_horiz_2022_SVG_1_1.svg' | file_url -%}
+{%- endif -%}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": {{ shop.name | json }},
+  "url": {{ site_url | json }},
+  "logo": {{ logo_url | json }}
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": {{ shop.name | json }},
+  "url": {{ site_url | json }},
+  "potentialAction": {
+    "@type": "SearchAction",
+    {%- capture search_target -%}{{ site_url }}/search?q={search_term_string}{%- endcapture -%}
+    "target": {{ search_target | json }},
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+{%- unless template == 'index' -%}
+  {%- capture breadcrumb_name -%}
+    {%- if template contains 'product' and product -%}
+      {{ product.title | strip | escape }}
+    {%- elsif template contains 'collection' and collection -%}
+      {{ collection.title | strip | escape }}
+    {%- elsif template contains 'article' and article -%}
+      {{ article.title | strip | escape }}
+    {%- else -%}
+      {{ page_title | strip | escape }}
+    {%- endif -%}
+  {%- endcapture -%}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": {{ site_url | json }}
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": {{ breadcrumb_name | json }},
+        "item": {{ canonical_url | default: request.origin | append: request.path | json }}
+      }
+    ]
+  }
+  </script>
+{%- endunless -%}
+
+{%- comment -%} Page-type specific schema {%- endcomment -%}
+{%- if template contains 'product' and product -%}
+  {%- render 'schema-product' with product: product -%}
+{%- elsif template contains 'article' and article -%}
+  {%- render 'schema-article' with article: article -%}
+{%- endif -%}

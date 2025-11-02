@@ -1,0 +1,133 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://brushonblock.com/pages/faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is mineral sunscreen better than chemical sunscreen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mineral sunscreens use zinc oxide or titanium dioxide to physically block UV rays, while chemical sunscreens absorb them. Mineral formulations are reef-safe, less likely to irritate sensitive skin, and provide immediate protection upon application. Brush On Block uses zinc oxide, a premium mineral ingredient that provides broad-spectrum UVA/UVB protection without harmful chemicals."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should I reapply sunscreen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dermatologists recommend reapplying sunscreen every 2 hours, or immediately after swimming or sweating heavily. Brush On Block's powder format makes reapplication throughout the day quick and convenient, even over makeup."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use powder sunscreen as my only SPF?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, when applied properly with adequate coverage. For initial morning application, some users prefer combining with a cream SPF like our Sheer Genius SPF 50, then using powder for touchups throughout the day. Our SPF 30 Mineral Powder Sunscreen provides full broad-spectrum protection when applied correctly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Brush On Block work over makeup?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! This is one of Brush On Block's key benefits. The powder formula can be applied over makeup without disturbing your foundation or other products, making it perfect for SPF reapplication throughout the day. This makes it easier to follow dermatologist recommendations for reapplying sunscreen every 2 hours."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What shade should I choose?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Translucent works for all skin tones and is our most popular shade. For those wanting additional coverage or color matching: choose Fair for light skin tones, Medium for medium skin tones, Tan for olive/tan complexions, and Deep for deeper skin tones. All shades provide the same SPF 30 broad-spectrum protection."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Brush On Block reef-safe?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, all Brush On Block mineral sunscreens are reef-safe. We use zinc oxide, which does not harm marine ecosystems, unlike certain chemical sunscreen ingredients (oxybenzone and octinoxate) that have been banned in Hawaii, Key West, and other locations due to coral reef damage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can men use these products?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely! While often marketed toward women, the clear/translucent formulas are perfect for men seeking convenient, effective sun protection without any tint or shine. The powder format is invisible and works great for all genders."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it safe for children?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our mineral formulations are gentle and suitable for children 6 months and older. The zinc oxide provides safe, physical sun protection. However, consult with a pediatrician for children under 6 months, as infant skin requires special consideration."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the key ingredients in Brush On Block products?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our products feature skin-loving ingredients: Zinc Oxide provides mineral-based broad-spectrum UVA/UVB protection; Niacinamide (Vitamin B3) hydrates and stimulates collagen production; Hyaluronic Acid draws moisture to skin and softens fine lines; and Vitamin C brightens and evens skin tone. These ingredients work together to provide sun protection plus skincare benefits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I apply Brush On Block Mineral Powder Sunscreen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Remove the brush cap and fluff bristles. Tap the brush to release powder. Apply in circular motions to face, neck, and décolletage. Build coverage as desired. Reapply every 2 hours or after swimming/sweating for continuous protection."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between SPF 30 and SPF 50 products?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SPF 30 blocks approximately 97% of UVB rays, while SPF 50 blocks about 98%. Our SPF 30 Mineral Powder Sunscreen is ideal for daily use and easy touchups. SPF 50 Sheer Genius provides enhanced protection for extended outdoor exposure, beach days, or those with very fair or sun-sensitive skin."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Brush On Block TSA-approved for travel?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! Our powder sunscreen format is TSA-approved and travel-friendly. The compact, spill-proof design makes it perfect for carry-on bags, purses, gym bags, and on-the-go sun protection."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are your products cruelty-free and vegan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, Brush On Block products are cruelty-free. We never test on animals. Most of our formulations are vegan, though some may contain beeswax or other ingredients derived from animals. Check individual product pages for specific ingredient information."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer refills?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! We offer refillable options for our powder sunscreens. You can purchase refills separately, reducing waste and saving money while maintaining your sun protection routine. This supports our commitment to sustainability and environmental responsibility."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will this sunscreen leave a white cast on my skin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our Translucent shade is designed to be invisible on all skin tones. The SPF 50 Sheer Genius in Untinted also applies clear without white cast. For those who prefer a slight tint, we offer multiple shade options and a Universal Tint in Sheer Genius that blends seamlessly with most skin tones."
+      }
+    }
+  ],
+  "about": {
+    "@type": "Thing",
+    "name": "Mineral Sunscreen Frequently Asked Questions"
+  },
+  "inLanguage": "en-US",
+  "url": "https://brushonblock.com/pages/faq"
+}

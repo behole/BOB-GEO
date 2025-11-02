@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>implementation-report-2025-10-22</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.4.0/github-markdown.min.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">implementation-report-2025-10-22</h1>
+</header>
+<h1 id="implementation-report--brush-on-block-concise">Implementation
+Report — Brush On Block (Concise)</h1>
+<h2 id="scope">Scope</h2>
+<ul>
+<li>Site: brushonblock.com (Shopify).</li>
+<li>Live changes: Product image ALT text.</li>
+<li>Staging changes: Theme <code>185693077873</code> (logo display,
+robots; schema queued).</li>
+<li>Exclusions: Blog article ALT (editorial pass later). Live theme code
+untouched.</li>
+</ul>
+<h2 id="accessibility-alt">Accessibility (ALT)</h2>
+<ul>
+<li>Products
+<ul>
+<li>Audited 101 products / 453 images; previously 143 missing ALT.</li>
+<li>Updated all missing using clean, product‑title based ALT; re‑audit
+confirms 0 remaining.</li>
+<li>Result: Better screen‑reader compatibility and basic GEO signals
+store‑wide.</li>
+</ul></li>
+<li>Pages
+<ul>
+<li>“Add‑only” pass (no overwrites). Fixed Press Archive; no other pages
+required changes.</li>
+</ul></li>
+<li>Blogs
+<ul>
+<li>Deferred to editorial fixpacks to keep tone and context
+accurate.</li>
+</ul></li>
+</ul>
+<h2 id="seo-filenames--renames">GEO Filenames &amp; Renames</h2>
+<ul>
+<li>Delivered
+<ul>
+<li>Unique + by‑page image inventories (CSV).</li>
+<li>Priority fixes (top 250) and a rename plan (745 rows) with reasons
+and steps.</li>
+</ul></li>
+<li>Execution plan
+<ul>
+<li>Run in staging first (uploads → reference swaps → QA), then
+publish.</li>
+<li>Paused on the new staging to avoid duplicating prior work until
+schema deploy is complete.</li>
+</ul></li>
+</ul>
+<h2 id="staging-theme--logo">Staging Theme &amp; Logo</h2>
+<ul>
+<li>New staging: <code>185693077873</code>.</li>
+<li>Outcome
+<ul>
+<li>Blue logo from Files set; explicit image width applied to
+<code>.header__logo-image</code> to preserve 3‑column flex layout.</li>
+<li>Transparent header setting aligned to the same blue file or
+disabled.</li>
+</ul></li>
+<li>Rationale
+<ul>
+<li>Avoids SVG intrinsic‑size pitfalls and header flex collapse; keeps
+layout predictable.</li>
+</ul></li>
+</ul>
+<h2 id="crawler-directives-robotsai">Crawler Directives (Robots/AI)</h2>
+<ul>
+<li>Installed on staging: <code>templates/robots.txt.liquid</code>.</li>
+<li>Policy
+<ul>
+<li><code>User-agent: *</code> with <code>Allow: /</code>.</li>
+<li>Explicit Allow for GPTBot, Google‑Extended, PerplexityBot,
+ClaudeBot, Applebot‑Extended, CCBot, Amazonbot.</li>
+<li>Preserves core Disallow (admin, cart, checkout, account) and
+includes Sitemap link.</li>
+</ul></li>
+<li>Value
+<ul>
+<li>Clear crawl posture for both traditional search and LLM/AI
+crawlers.</li>
+</ul></li>
+</ul>
+<h2 id="structured-data-jsonld">Structured Data (JSON‑LD)</h2>
+<ul>
+<li>Prepared snippets (ready to deploy)
+<ul>
+<li><code>snippets/seo-schema.liquid</code>: Organization + WebSite +
+Breadcrumb.</li>
+<li><code>snippets/schema-product.liquid</code>: Product with Offer
+(currency/price/availability), Brand, MPN (SKU), GTIN (from barcode when
+present).</li>
+<li><code>snippets/schema-article.liquid</code>: Article with headline,
+dates, author, image.</li>
+</ul></li>
+<li>Integration
+<ul>
+<li>Add <code>{% render 'seo-schema' %}</code> inside
+<code>&lt;head&gt;</code> of <code>layout/theme.liquid</code>.</li>
+<li>Product/Article schema renders only on relevant templates.</li>
+</ul></li>
+<li>Status
+<ul>
+<li>API deployment to staging queued; manual copy/paste fallback
+documented in <code>docs/deploy-schema-and-robots.md</code>.</li>
+</ul></li>
+<li>Value
+<ul>
+<li>Rich‑result eligibility (Products/Articles), stronger entity
+grounding for search and LLMs.</li>
+</ul></li>
+</ul>
+<h2 id="ai-text-files">AI Text Files</h2>
+<ul>
+<li>ai.txt / llms.txt
+<ul>
+<li>“Allow all” policy text prepared; recommend upload to Files and URL
+redirects (<code>/ai.txt</code>, <code>/llms.txt</code>).</li>
+</ul></li>
+</ul>
+<h2 id="validation">Validation</h2>
+<ul>
+<li>ALT re‑audit: 0 missing on products after fills.</li>
+<li>Robots: Staging preview returns custom policy; template is picked
+up.</li>
+<li>Schema: Will validate via Rich Results Test and source checks
+post‑deploy.</li>
+</ul>
+<h2 id="risks--safeguards">Risks &amp; Safeguards</h2>
+<ul>
+<li>ALT updates: Low risk; product‑media API only; pages add‑only avoids
+overwrites.</li>
+<li>Renames: Higher blast radius; stage first, QA, then publish.</li>
+<li>Schema: Avoid duplicates; remove legacy JSON‑LD after new snippets
+are live.</li>
+</ul>
+<h2 id="rollback">Rollback</h2>
+<ul>
+<li>Products: ALT can be reverted per image in Admin if needed.</li>
+<li>Staging theme: Duplicate again to discard changes; Files uploads
+persist but are harmless.</li>
+<li>Robots/Schema: Remove the template/snippets and the render line to
+restore defaults.</li>
+</ul>
+<h2 id="next-steps-recommended">Next Steps (Recommended)</h2>
+<ul>
+<li>Complete schema deployment on staging (via API or quick paste) and
+validate:
+<ul>
+<li>Home: Organization/WebSite</li>
+<li>PDP: Product (Offer, GTIN/MPN if available)</li>
+<li>Article: Article</li>
+</ul></li>
+<li>Ship ai.txt / llms.txt (Files + redirects) on staging, then
+live.</li>
+<li>Begin staged image‑rename batches:
+<ul>
+<li>Batch 1: Homepage + top products (rename + references) in staging;
+QA; publish.</li>
+</ul></li>
+<li>Editorial blog ALT:
+<ul>
+<li>Generate article fixpacks (per‑article suggested ALT) → review →
+apply add‑only.</li>
+</ul></li>
+</ul>
+</body>
+</html>

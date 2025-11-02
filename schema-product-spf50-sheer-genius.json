@@ -1,0 +1,214 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://brushonblock.com/products/spf-50-sheer-genius",
+  "name": "Brush On Block SPF 50 Sheer Genius Mineral Sunscreen + Moisture",
+  "description": "Level up your skincare routine with Sheer Genius SPF 50 Mineral Sunscreen + Moisture. Provides invisible broad spectrum SPF 50 protection infused with hyaluronic acid to keep your skin moisturized and plumped. Available in Untinted and Universal Tint. Use with Sheer Genius Brush for application perfection.",
+  "brand": {
+    "@type": "Brand",
+    "@id": "https://brushonblock.com/#brand",
+    "name": "Brush On Block"
+  },
+  "manufacturer": {
+    "@id": "https://brushonblock.com/#organization"
+  },
+  "logo": "https://brushonblock.com/cdn/shop/files/brush-on-block-logo.png",
+  "image": [
+    "https://brushonblock.com/cdn/shop/files/sheer_genius.png",
+    "https://brushonblock.com/cdn/shop/files/spf50-product-front.jpg",
+    "https://brushonblock.com/cdn/shop/files/spf50-application.jpg",
+    "https://brushonblock.com/cdn/shop/files/spf50-lifestyle.jpg"
+  ],
+  "sku": "BOB-SPF50-SHEER-GENIUS",
+  "gtin": "XXXXXXXXXXXX",
+  "mpn": "SPF50-SHEER-GENIUS",
+  "category": "Health & Beauty > Personal Care > Cosmetics > Skin Care > Sunscreen",
+  "productID": "spf-50-sheer-genius",
+  "url": "https://brushonblock.com/products/spf-50-sheer-genius",
+  "offers": {
+    "@type": "AggregateOffer",
+    "url": "https://brushonblock.com/products/spf-50-sheer-genius",
+    "priceCurrency": "USD",
+    "lowPrice": "38.00",
+    "highPrice": "48.00",
+    "priceValidUntil": "2025-12-31",
+    "availability": "https://schema.org/InStock",
+    "itemCondition": "https://schema.org/NewCondition",
+    "seller": {
+      "@id": "https://brushonblock.com/#organization"
+    },
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingDestination": {
+        "@type": "DefinedRegion",
+        "addressCountry": "US"
+      },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "businessDays": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+        },
+        "cutoffTime": "17:00:00",
+        "handlingTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 1,
+          "maxValue": 2,
+          "unitCode": "DAY"
+        },
+        "transitTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 3,
+          "maxValue": 7,
+          "unitCode": "DAY"
+        }
+      }
+    },
+    "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+      "merchantReturnDays": 30,
+      "returnMethod": "https://schema.org/ReturnByMail",
+      "returnFees": "https://schema.org/FreeReturn"
+    }
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "387",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Jennifer K."
+      },
+      "reviewBody": "The SPF 50 protection is perfect for long days outdoors. Love that it's invisible and doesn't leave a white cast. The hyaluronic acid keeps my skin hydrated all day.",
+      "datePublished": "2025-01-20"
+    }
+  ],
+  "isRelatedTo": [
+    {
+      "@type": "Product",
+      "name": "Brush On Block SPF 30 Mineral Powder",
+      "url": "https://brushonblock.com/products/spf-30-mineral-powder-sunscreen"
+    },
+    {
+      "@type": "Product",
+      "name": "Sheer Genius Application Brush",
+      "url": "https://brushonblock.com/products/sheer-genius-brush"
+    }
+  ],
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "SPF Level",
+      "value": "50"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Protection Type",
+      "value": "Broad Spectrum UVA/UVB"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Sunscreen Type",
+      "value": "Mineral/Physical"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Active Ingredient",
+      "value": "Zinc Oxide"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Format",
+      "value": "Cream with Brush Application"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Finish",
+      "value": "Invisible/Sheer"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Reef Safe",
+      "value": "Yes"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Cruelty Free",
+      "value": "Yes"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Paraben Free",
+      "value": "Yes"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Non-Comedogenic",
+      "value": "Yes"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Dermatologist Tested",
+      "value": "Yes"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Hydrating Formula",
+      "value": "Yes - Contains Hyaluronic Acid"
+    }
+  ],
+  "material": "Zinc Oxide, Hyaluronic Acid",
+  "audience": {
+    "@type": "PeopleAudience",
+    "suggestedGender": "Unisex",
+    "suggestedMinAge": 6,
+    "audienceType": "Outdoor enthusiasts and those seeking high SPF protection with moisturizing benefits"
+  },
+  "hasVariant": [
+    {
+      "@type": "Product",
+      "name": "SPF 50 Sheer Genius - Untinted",
+      "sku": "BOB-SPF50-UNTINTED",
+      "color": "Untinted",
+      "offers": {
+        "@type": "Offer",
+        "price": "38.00",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "SPF 50 Sheer Genius - Universal Tint",
+      "sku": "BOB-SPF50-TINTED",
+      "color": "Universal Tint",
+      "offers": {
+        "@type": "Offer",
+        "price": "38.00",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+  ],
+  "video": {
+    "@type": "VideoObject",
+    "name": "How to Apply Sheer Genius SPF 50 with Brush",
+    "description": "Tutorial on applying SPF 50 Sheer Genius for optimal coverage and protection",
+    "thumbnailUrl": "https://brushonblock.com/cdn/shop/files/spf50-video-thumbnail.jpg",
+    "uploadDate": "2025-01-01",
+    "contentUrl": "https://brushonblock.com/videos/sheer-genius-application.mp4"
+  },
+  "itemCondition": "https://schema.org/NewCondition"
+}

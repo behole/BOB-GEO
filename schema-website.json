@@ -1,0 +1,34 @@
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://brushonblock.com/#website",
+  "url": "https://brushonblock.com",
+  "name": "Brush On Block - Mineral Powder Sunscreen & Natural Skincare",
+  "description": "Shop premium mineral sunscreen products featuring SPF 30 and SPF 50 powder formulations with niacinamide, hyaluronic acid, and vitamin C. Reef-safe, clean beauty sun protection.",
+  "publisher": {
+    "@id": "https://brushonblock.com/#organization"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://brushonblock.com/search?q={search_term_string}"
+    },
+    "query-input": {
+      "@type": "PropertyValueSpecification",
+      "valueRequired": true,
+      "valueName": "search_term_string"
+    }
+  },
+  "inLanguage": "en-US",
+  "copyrightYear": "2025",
+  "copyrightHolder": {
+    "@id": "https://brushonblock.com/#organization"
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Mineral Sunscreen and Natural Skincare Products",
+    "description": "Clean beauty sun protection with skin-loving ingredients"
+  },
+  "keywords": "mineral sunscreen, powder sunscreen, SPF 30, SPF 50, zinc oxide sunscreen, reef-safe sunscreen, clean beauty, natural skincare, niacinamide, hyaluronic acid, vitamin C, brush-on sunscreen, portable sunscreen, makeup-friendly SPF"
+}

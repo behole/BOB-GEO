@@ -1,0 +1,63 @@
+{%- comment -%}
+  Product JSON-LD
+  - Maps price/availability from the selected or first available variant
+  - Adds GTIN when barcode length matches GTIN8/12/13/14
+  - Uses SKU as MPN fallback
+{%- endcomment -%}
+
+{%- assign v = product.selected_or_first_available_variant -%}
+{%- assign price_number = v.price | divided_by: 100.0 -%}
+{%- assign currency = cart.currency.iso_code | default: shop.currency -%}
+{%- assign avail = v.available -%}
+{%- assign barcode = v.barcode | strip -%}
+{%- assign sku = v.sku | strip -%}
+
+{%- capture gtin_kv -%}
+  {%- if barcode != blank -%}
+    {%- case barcode.size -%}
+      {%- when 8 -%}"gtin8": {{ barcode | json }}
+      {%- when 12 -%}"gtin12": {{ barcode | json }}
+      {%- when 13 -%}"gtin13": {{ barcode | json }}
+      {%- when 14 -%}"gtin14": {{ barcode | json }}
+    {%- endcase -%}
+  {%- endif -%}
+{%- endcapture -%}
+
+{%- comment -%} Build image array {%- endcomment -%}
+{%- capture image_array -%}
+  {%- for media in product.media limit: 12 -%}
+    {{ media | image_url: width: 1600 | prepend: 'https:' | json }}{%- unless forloop.last -%}, {%- endunless -%}
+  {%- endfor -%}
+{%- endcapture -%}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": {{ product.title | strip | json }},
+  "image": [{{ image_array }}],
+  "description": {{ product.description | strip_html | strip_newlines | truncate: 5000 | json }},
+  "brand": { "@type": "Brand", "name": "Brush On Block" },
+  {%- if sku != blank -%}
+  "mpn": {{ sku | json }},
+  {%- endif -%}
+  {%- if gtin_kv contains 'gtin' -%}
+  {{ gtin_kv }},
+  {%- endif -%}
+  "offers": {
+    "@type": "Offer",
+    "url": {{ shop.url | append: product.url | json }},
+    "priceCurrency": {{ currency | json }},
+    "price": {{ price_number | json }},
+    "availability": "https://schema.org/{% if avail %}InStock{% else %}OutOfStock{% endif %}",
+    "itemCondition": "https://schema.org/NewCondition"
+  }
+  {%- comment -%}
+    Optionally include AggregateRating if your reviews app exposes counts/averages via metafields.
+    Example (uncomment and adjust keys):
+    ,
+    "aggregateRating": {"@type":"AggregateRating","ratingValue": {{ product.metafields.reviews.rating | json }},"reviewCount": {{ product.metafields.reviews.rating_count | json }}}
+  {%- endcomment -%}
+}
+</script>
+

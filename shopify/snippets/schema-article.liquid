@@ -1,0 +1,29 @@
+{%- comment -%}
+  Article (Blog Post) JSON-LD
+{%- endcomment -%}
+
+{%- assign headline = article.title | strip -%}
+{%- assign pub = article.published_at | date: '%Y-%m-%dT%H:%M:%S%:z' -%}
+{%- assign mod = article.updated_at | date: '%Y-%m-%dT%H:%M:%S%:z' -%}
+{%- assign author_name = article.author | default: shop.name -%}
+{%- assign img = '' -%}
+{%- if article.image -%}
+  {%- assign img = article | image_url: width: 1600 | prepend: 'https:' -%}
+{%- endif -%}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ headline | json }},
+  {%- if img != blank -%}
+  "image": [ {{ img | json }} ],
+  {%- endif -%}
+  "datePublished": {{ pub | json }},
+  "dateModified": {{ mod | json }},
+  "author": { "@type": "Person", "name": {{ author_name | json }} },
+  "publisher": { "@type": "Organization", "name": {{ shop.name | json }} },
+  "mainEntityOfPage": {"@type": "WebPage", "@id": {{ shop.url | append: article.url | json }}}
+}
+</script>
+

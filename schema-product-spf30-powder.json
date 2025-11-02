@@ -1,0 +1,265 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://brushonblock.com/products/spf-30-mineral-powder-sunscreen",
+  "name": "Brush On Block SPF 30 Mineral Powder Sunscreen",
+  "description": "Take-it-anywhere SPF 30 mineral powder sunscreen with skin-loving ingredients including zinc oxide, niacinamide, hyaluronic acid, and vitamin C. Provides broad-spectrum UVA/UVB protection in a convenient brush-on format. Perfect for touchups over makeup.",
+  "brand": {
+    "@type": "Brand",
+    "@id": "https://brushonblock.com/#brand",
+    "name": "Brush On Block"
+  },
+  "manufacturer": {
+    "@id": "https://brushonblock.com/#organization"
+  },
+  "logo": "https://brushonblock.com/cdn/shop/files/brush-on-block-logo.png",
+  "image": [
+    "https://brushonblock.com/cdn/shop/files/refill_triptych_2.jpg",
+    "https://brushonblock.com/cdn/shop/files/spf30-product-front.jpg",
+    "https://brushonblock.com/cdn/shop/files/spf30-product-brush.jpg",
+    "https://brushonblock.com/cdn/shop/files/spf30-lifestyle.jpg"
+  ],
+  "sku": "BOB-SPF30-POWDER",
+  "gtin": "XXXXXXXXXXXX",
+  "mpn": "SPF30-POWDER",
+  "category": "Health & Beauty > Personal Care > Cosmetics > Skin Care > Sunscreen",
+  "productID": "spf-30-mineral-powder-sunscreen",
+  "url": "https://brushonblock.com/products/spf-30-mineral-powder-sunscreen",
+  "offers": {
+    "@type": "AggregateOffer",
+    "url": "https://brushonblock.com/products/spf-30-mineral-powder-sunscreen",
+    "priceCurrency": "USD",
+    "lowPrice": "34.00",
+    "highPrice": "44.00",
+    "priceValidUntil": "2025-12-31",
+    "availability": "https://schema.org/InStock",
+    "itemCondition": "https://schema.org/NewCondition",
+    "seller": {
+      "@id": "https://brushonblock.com/#organization"
+    },
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingDestination": {
+        "@type": "DefinedRegion",
+        "addressCountry": "US"
+      },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "businessDays": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+        },
+        "cutoffTime": "17:00:00",
+        "handlingTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 1,
+          "maxValue": 2,
+          "unitCode": "DAY"
+        },
+        "transitTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 3,
+          "maxValue": 7,
+          "unitCode": "DAY"
+        }
+      }
+    },
+    "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+      "merchantReturnDays": 30,
+      "returnMethod": "https://schema.org/ReturnByMail",
+      "returnFees": "https://schema.org/FreeReturn"
+    }
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "523",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Sarah M."
+      },
+      "reviewBody": "Love this powder sunscreen! So easy to apply and reapply throughout the day, even over makeup. The niacinamide and hyaluronic acid make my skin feel great.",
+      "datePublished": "2025-01-15"
+    }
+  ],
+  "isRelatedTo": [
+    {
+      "@type": "Product",
+      "name": "Brush On Block SPF 50 Sheer Genius",
+      "url": "https://brushonblock.com/products/spf-50-sheer-genius"
+    },
+    {
+      "@type": "Product",
+      "name": "Brush On Block Lip Oil SPF",
+      "url": "https://brushonblock.com/products/lip-oil-spf"
+    }
+  ],
+  "isSimilarTo": [
+    {
+      "@type": "Product",
+      "name": "Mineral Powder Sunscreen Refill",
+      "url": "https://brushonblock.com/products/powder-refill"
+    }
+  ],
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "SPF Level",
+      "value": "30"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Protection Type",
+      "value": "Broad Spectrum UVA/UVB"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Sunscreen Type",
+      "value": "Mineral/Physical"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Active Ingredient",
+      "value": "Zinc Oxide"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Format",
+      "value": "Powder with Built-in Brush"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Reef Safe",
+      "value": "Yes"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Cruelty Free",
+      "value": "Yes"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Paraben Free",
+      "value": "Yes"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Non-Comedogenic",
+      "value": "Yes"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Dermatologist Tested",
+      "value": "Yes"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "TSA Approved",
+      "value": "Yes"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Makeup Compatible",
+      "value": "Yes - Can be applied over makeup"
+    }
+  ],
+  "material": "Zinc Oxide, Niacinamide, Hyaluronic Acid, Vitamin C",
+  "audience": {
+    "@type": "PeopleAudience",
+    "suggestedGender": "Unisex",
+    "suggestedMinAge": 6,
+    "audienceType": "Health-conscious consumers seeking clean beauty sun protection"
+  },
+  "hasVariant": [
+    {
+      "@type": "Product",
+      "name": "SPF 30 Mineral Powder - Translucent",
+      "sku": "BOB-SPF30-TRANSLUCENT",
+      "color": "Translucent",
+      "offers": {
+        "@type": "Offer",
+        "price": "34.00",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "SPF 30 Mineral Powder - Fair",
+      "sku": "BOB-SPF30-FAIR",
+      "color": "Fair",
+      "offers": {
+        "@type": "Offer",
+        "price": "34.00",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "SPF 30 Mineral Powder - Medium",
+      "sku": "BOB-SPF30-MEDIUM",
+      "color": "Medium",
+      "offers": {
+        "@type": "Offer",
+        "price": "34.00",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "SPF 30 Mineral Powder - Tan",
+      "sku": "BOB-SPF30-TAN",
+      "color": "Tan",
+      "offers": {
+        "@type": "Offer",
+        "price": "34.00",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "SPF 30 Mineral Powder - Deep",
+      "sku": "BOB-SPF30-DEEP",
+      "color": "Deep",
+      "offers": {
+        "@type": "Offer",
+        "price": "34.00",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+  ],
+  "video": {
+    "@type": "VideoObject",
+    "name": "How to Apply Brush On Block SPF 30 Mineral Powder Sunscreen",
+    "description": "Learn how to properly apply our mineral powder sunscreen for maximum protection",
+    "thumbnailUrl": "https://brushonblock.com/cdn/shop/files/video-thumbnail.jpg",
+    "uploadDate": "2025-01-01",
+    "contentUrl": "https://brushonblock.com/videos/how-to-apply.mp4"
+  },
+  "itemCondition": "https://schema.org/NewCondition",
+  "hasMeasurement": [
+    {
+      "@type": "QuantitativeValue",
+      "name": "Net Weight",
+      "value": "3",
+      "unitCode": "GRM"
+    }
+  ]
+}

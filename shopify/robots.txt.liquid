@@ -1,0 +1,47 @@
+{%- comment -%}
+  Custom robots.txt for Brush On Block (staging)
+  - Preserves core disallows
+  - Explicitly allows common AI/LLM crawlers
+{%- endcomment -%}
+
+# Core
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /cart
+Disallow: /checkout
+Disallow: /orders
+Disallow: /account
+Disallow: /policies/returns
+Disallow: /search?*view=json
+
+Sitemap: {{ shop.url }}/sitemap.xml
+
+# LLM / AI crawlers (explicitly allowed)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
