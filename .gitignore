@@ -12,6 +12,7 @@ env/
 # IDE
 .vscode/
 .idea/
+.claude/
 *.swp
 *.swo
 *~
@@ -30,3 +31,7 @@ config.json
 
 # Logs
 *.log
+
+# Generated exports (regenerate from markdown as needed)
+docs/html/
+docs/pdf/
